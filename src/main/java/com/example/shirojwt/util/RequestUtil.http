@@ -9,12 +9,29 @@ POST http://localhost:8079/user/login
 Content-Type: application/json
 
 {"userPhone":"15623891368","userPassword":"123456"}
-
 ###
 
 GET http://localhost:8079/user/test
 Accept: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTAxMjksImlhdCI6MTU3NTAwODMyOSwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.9WEpvVAL3U3asSeb_CsUfeQGqv3nC4P4lLTVhKYPrf4
+###
 
-{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzQ2NDUwNjksImlhdCI6MTU3NDY0NDg4OSwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.aXsWJ3js4L-FsFWweGfmj3gRjGlSLq-4X6Qm41gkIP4"}
+POST http://localhost:8079/business-type/saveBusinessType
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTQ5MzgsImlhdCI6MTU3NTAxMzEzOCwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.5E36teWslGv5QyIV4zXz8QeuK_KhEQXQS56M63mZ2Io
 
+{"type":2,"remark":"test3"}
+###
+
+GET http://localhost:8079/business-type/getById?id=1
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTQ5MzgsImlhdCI6MTU3NTAxMzEzOCwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.5E36teWslGv5QyIV4zXz8QeuK_KhEQXQS56M63mZ2Io
+
+###
+
+PUT http://localhost:8079/business-type/updateById
+Content-Type: application/json
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTQ5MzgsImlhdCI6MTU3NTAxMzEzOCwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.5E36teWslGv5QyIV4zXz8QeuK_KhEQXQS56M63mZ2Io
+
+{"id":1,"type":11,"remark":"test徐伟","update_time":"2019-11-29 15:43:16"}
 ###

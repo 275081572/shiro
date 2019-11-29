@@ -5,6 +5,7 @@ spring:
     #    driver-class-name: com.mysql.jdbc.Driver
     #    mysql8用下面的这个驱动
     driver-class-name:  com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
     username: root
     password: root
     url: jdbc:mysql://193.112.79.59:3308/shiro?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&useSSL=false&allowMultiQueries=true
@@ -13,9 +14,16 @@ spring:
 logging:
   level:
     com.xinzuo.lvyou.dao: debug
-#mybatis plusxml路径配置
+
+#mybatis配置
 mybatis-plus:
-  mapper-locations: classpath:mapper/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      table-underline: true
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+  mapper-locations: classpath:/mapper/*.xml
 
 server:
   port: 8079

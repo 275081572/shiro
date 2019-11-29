@@ -3,7 +3,12 @@ package com.example.shirojwt;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
-import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.FileOutConfig;
+import com.baomidou.mybatisplus.generator.config.GlobalConfig;
+import com.baomidou.mybatisplus.generator.config.PackageConfig;
+import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
@@ -24,7 +29,7 @@ public class CodeGenerator {
 
     public static void main(String[] args) {
         //在这里输入你要生成的表名
-        boolean b = generateEntity("user");
+        boolean b = generateEntity("product");
         if (!b) {
             log.error("==========================逆向生成失败！=================================");
         }
@@ -47,20 +52,20 @@ public class CodeGenerator {
             GlobalConfig gc = new GlobalConfig();
             String projectPath = System.getProperty("user.dir");
             gc.setOutputDir(projectPath + "/src/main/java");
-            gc.setAuthor("zhangxiaoxiang");
+            gc.setAuthor("xuwei");
             gc.setOpen(false);
             // gc.setSwagger2(true); 实体属性 Swagger2 注解
             mpg.setGlobalConfig(gc);
             // 自定义文件命名，注意 %s 会自动填充表实体属性！
             gc.setMapperName("%sDao");
             gc.setXmlName("%sMapper");
-            gc.setServiceName("%sService");
+            gc.setServiceName("I%sService");
             gc.setServiceImplName("%sServiceImpl");
             gc.setControllerName("%sController");
 
             // 数据源配置
             DataSourceConfig dsc = new DataSourceConfig();
-            dsc.setUrl("jdbc:mysql://localhost:3306/lvyou?useUnicode=true&useSSL=false&characterEncoding=utf8");
+            dsc.setUrl("jdbc:mysql://193.112.79.59:3308/shiro?useUnicode=true&useSSL=false&characterEncoding=utf8");
             // dsc.setSchemaName("public");
             dsc.setDriverName("com.mysql.jdbc.Driver");
             dsc.setUsername("root");
@@ -137,7 +142,7 @@ public class CodeGenerator {
             // 公共父类
             //strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
             // 写于父类中的公共字段
-            strategy.setSuperEntityColumns("id");
+            //strategy.setSuperEntityColumns("id");
             strategy.setInclude(tableName);
             strategy.setControllerMappingHyphenStyle(true);
             strategy.setTablePrefix(pc.getModuleName() + "_");

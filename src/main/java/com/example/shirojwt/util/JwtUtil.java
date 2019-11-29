@@ -18,9 +18,9 @@ import java.util.Date;
 @Slf4j
 public class JwtUtil {
     /**
-     * JWT验证过期时间 3分钟
+     * JWT验证过期时间 30分钟
      */
-    public static final long EXPIRE_TIME = 3 * 60 * 1000;
+    public static final long EXPIRE_TIME = 30 * 60 * 1000;
 
     /**
      * 校验token是否正确
