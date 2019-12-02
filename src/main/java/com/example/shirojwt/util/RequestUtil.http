@@ -31,7 +31,7 @@ token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTQ5MzgsImlhdCI6MTU3
 
 PUT http://localhost:8079/business-type/updateById
 Content-Type: application/json
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUwMTQ5MzgsImlhdCI6MTU3NTAxMzEzOCwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.5E36teWslGv5QyIV4zXz8QeuK_KhEQXQS56M63mZ2Io
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NzUyNTU4MzUsImlhdCI6MTU3NTI1NDAzNSwidXNlcm5hbWUiOiIxNTYyMzg5MTM2OCJ9.8zB4ZLFuTkYG0gm-iAz1GlgjRPFzgsYcBbUKsMESe2c
 
-{"id":1,"type":11,"remark":"test徐伟","update_time":"2019-11-29 15:43:16"}
+{"id":1,"type":12}
 ###

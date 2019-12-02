@@ -28,10 +28,19 @@ public class Product implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
+    /**
+     * 名称
+     */
     private String name;
 
+    /**
+     * 价格
+     */
     private BigDecimal price;
 
+    /**
+     * 备注
+     */
     private String remark;
 
     private LocalDateTime createTime;

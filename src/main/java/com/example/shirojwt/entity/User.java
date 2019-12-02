@@ -1,13 +1,12 @@
 package com.example.shirojwt.entity;
 
-import java.time.LocalDateTime;
-import java.io.Serializable;
-import java.util.Date;
-
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -73,7 +72,7 @@ public class User implements Serializable {
     /**
      * 用户出生日期
      */
-    private LocalDateTime userDateBirth;
+    private Date userDateBirth;
 
     /**
      * 用户个性签名
