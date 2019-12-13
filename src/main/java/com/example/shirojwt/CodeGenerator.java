@@ -16,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * CodeGenerator:逆向生成表数据启动main方法
@@ -26,8 +27,24 @@ import java.util.List;
 @Slf4j
 public class CodeGenerator {
 
+    /**
+     * Scanner类中的方法
+     * 优点一: 可以获取键盘输入的字符串
+     * 优点二: 有现成的获取int,float等类型数据，非常强大，也非常方便；
+     */
+    public static void ScannerTest() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ScannerTest, Please Enter Name:");
+        String name = sc.nextLine();
+        System.out.println("ScannerTest, Please Enter Age:");
+        int age = sc.nextInt();
+        System.out.println("Name:" + name + "\n" + "Age:" + age + "\n");
+    }
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
+        /*while (true){
+            ScannerTest();
+        }*/
         //在这里输入你要生成的表名
         boolean b = generateEntity("product");
         if (!b) {
